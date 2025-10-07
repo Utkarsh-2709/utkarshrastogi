@@ -28,7 +28,7 @@ export default function Footer() {
               variant="ghost"
               size="icon"
               className="rounded-full"
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/Utkarsh-2709', '_blank')}
             >
               <Github className="w-5 h-5" />
             </Button>
@@ -36,7 +36,7 @@ export default function Footer() {
               variant="ghost"
               size="icon"
               className="rounded-full"
-              onClick={() => window.open('https://linkedin.com', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/utkarsh-rastogi-750830337/', '_blank')}
             >
               <Linkedin className="w-5 h-5" />
             </Button>
