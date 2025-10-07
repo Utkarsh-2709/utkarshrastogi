@@ -86,7 +86,7 @@ export default function About() {
             filter: blur(18px);
           }
           50% {
-            opacity: 0.3;
+            opacity: 0.5;
             transform: scale(1.12);
             filter: blur(28px);
           }

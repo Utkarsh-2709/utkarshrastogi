@@ -115,7 +115,7 @@ export default function Hero() {
               variant="ghost"
               size="icon"
               className="rounded-full hover:bg-blue-50 dark:hover:bg-slate-800"
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/Utkarsh-2709', '_blank')}
             >
               <Github className="h-6 w-6" />
             </Button>
@@ -123,7 +123,7 @@ export default function Hero() {
               variant="ghost"
               size="icon"
               className="rounded-full hover:bg-blue-50 dark:hover:bg-slate-800"
-              onClick={() => window.open('https://linkedin.com', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/utkarsh-rastogi-750830337/', '_blank')}
             >
               <Linkedin className="h-6 w-6" />
             </Button>
