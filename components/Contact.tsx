@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader as Loader2, CircleCheck as CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const ref = useRef(null);
@@ -20,20 +21,39 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // Replace with your EmailJS credentials
+  const SERVICE_ID = 'service_8axkjhu';
+  const TEMPLATE_ID = 'template_roeb8zn';
+  const PUBLIC_KEY = 'YlbCEtPf9PdMLgJAV';
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    await new Promise(resolve => setTimeout(resolve, 2500));
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        PUBLIC_KEY
+      );
 
-    setIsSubmitting(false);
-    setShowSuccess(true);
+      setIsSubmitting(false);
+      setShowSuccess(true);
 
-    setTimeout(() => {
-      setShowSuccess(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 5000);
+      setTimeout(() => {
+        setShowSuccess(false);
+        setFormData({ name: '', email: '', message: '' });
+      }, 5000);
+    } catch (error) {
+      console.error('Email sending error:', error);
+      setIsSubmitting(false);
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -53,6 +73,7 @@ export default function Contact() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
+            {/* Left - Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -65,7 +86,7 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -77,7 +98,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -89,14 +110,12 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Location</h4>
-                      <p className="text-gray-700 dark:text-gray-300">
-                        Bareilly, Uttar Pradesh, India
-                      </p>
+                      <p className="text-gray-700 dark:text-gray-300">Bareilly, Uttar Pradesh, India</p>
                     </div>
                   </div>
                 </div>
@@ -125,6 +144,7 @@ export default function Contact() {
               </Card>
             </motion.div>
 
+            {/* Right - Form */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}

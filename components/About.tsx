@@ -29,30 +29,31 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* === PHOTO SECTION === */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-center"
-            >
-              {/* Glowing Circle Wrapper */}
-              <div className="relative w-72 h-72">
-                {/* Outer animated glow ring */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 animate-[pulseGlow_3s_ease-in-out_infinite] blur-md"></div>
+  initial={{ opacity: 0, x: -50 }}
+  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="flex justify-center"
+>
+  {/* Glowing Capsule Wrapper */}
+  <div className="relative w-72 h-80">
+    {/* Outer animated glow ring */}
+    <div className="absolute inset-0 rounded-[9999px] bg-gradient-to-tr from-blue-600 to-cyan-500 animate-[pulseGlow_3s_ease-in-out_infinite] blur-md"></div>
 
-                {/* Inner circle container */}
-                <div className="relative w-full h-full rounded-full bg-white dark:bg-slate-900 p-1">
-                  <div className="w-full h-full rounded-full overflow-hidden">
-                    <Image
-                      src="/myphoto.jpg"
-                      alt="My Photo"
-                      width={288}
-                      height={288}
-                      className="object-cover w-full h-full rounded-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+    {/* Inner capsule container */}
+    <div className="relative w-full h-full rounded-[9999px] bg-white dark:bg-slate-900 p-1">
+      <div className="w-full h-full rounded-[9999px] overflow-hidden">
+        <Image
+          src="/myphoto.jpg"
+          alt="My Photo"
+          width={288}
+          height={320}
+          className="object-cover w-full h-full rounded-[9999px]"
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
+
 
             {/* === ABOUT TEXT SECTION === */}
             <motion.div
