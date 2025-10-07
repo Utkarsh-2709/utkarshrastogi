@@ -13,28 +13,33 @@ export default function Certifications() {
   const certifications = [
     {
       title: 'Integrating AI with SQL',
-      issuer: 'Online Learning Platform',
+      issuer: 'AI for Techies',
       color: 'from-blue-600 to-cyan-600',
+      link: '/certificates/sql-using-ai.pdf',
     },
     {
-      title: 'Data Analysis Fundamentals',
-      issuer: 'Online Learning Platform',
+      title: 'Data Analytics Job Simulation',
+      issuer: 'Deloitte Australia',
       color: 'from-purple-600 to-pink-600',
+      link: 'certificates/data-analytics-job-simulation-certificate-by-deloitte.pdf',
     },
     {
-      title: 'Python for Data Science',
-      issuer: 'Online Learning Platform',
+      title: 'Data Visualisation',
+      issuer: 'Forage',
       color: 'from-green-600 to-teal-600',
+      link: 'certificates/data-visualisation-certificate-by-tata-forage.pdf',
     },
     {
-      title: 'Power BI Dashboard Design',
-      issuer: 'Online Learning Platform',
+      title: 'Full Stack Web Development',
+      issuer: 'Udemy',
       color: 'from-yellow-600 to-orange-600',
+      link: 'certificates/web-dev-certificate.pdf',
     },
     {
-      title: 'Responsive Web Development',
-      issuer: 'Online Learning Platform',
+      title: 'React.JS Crash Course',
+      issuer: 'Udemy',
       color: 'from-red-600 to-pink-600',
+      link: 'certificates/react-js-certificate.pdf',
     },
   ];
 
@@ -49,7 +54,7 @@ export default function Certifications() {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Certifications
+              Certifications & Additional Learning
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
           </div>
@@ -63,19 +68,28 @@ export default function Certifications() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
-                <Card className="p-6 h-full bg-white dark:bg-slate-900 border-none shadow-xl hover:shadow-2xl transition-all group cursor-pointer">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${cert.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
+                {/* Added anchor tag to make the card clickable */}
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Card className="p-6 h-full bg-white dark:bg-slate-900 border-none shadow-xl hover:shadow-2xl transition-all group cursor-pointer">
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-gradient-to-r ${cert.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                    >
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                    {cert.title}
-                  </h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                      {cert.title}
+                    </h3>
 
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {cert.issuer}
-                  </p>
-                </Card>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {cert.issuer}
+                    </p>
+                  </Card>
+                </a>
               </motion.div>
             ))}
           </div>

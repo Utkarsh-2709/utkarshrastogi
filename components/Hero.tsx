@@ -117,7 +117,7 @@ export default function Hero() {
               className="rounded-full hover:bg-blue-50 dark:hover:bg-slate-800"
               onClick={() => window.open('https://github.com/Utkarsh-2709', '_blank')}
             >
-              <Github className="h-6 w-6" />   
+              <Github className="h-6 w-6" />
             </Button>
             <Button
               variant="ghost"
