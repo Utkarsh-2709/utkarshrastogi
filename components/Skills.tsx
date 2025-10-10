@@ -20,7 +20,7 @@ export default function Skills() {
     {
       title: 'AI Tools',
       icon: Brain,
-      skills: ['Claude AI', 'ChatGPT', 'Perplexity', 'LeetCode', 'Cursor', 'Replit'],
+      skills: ['Claude AI', 'ChatGPT', 'Perplexity', 'Replit'],
       color: 'from-purple-600 to-pink-600',
     },
     {

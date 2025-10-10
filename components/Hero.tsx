@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, Instagram, ArrowDown } from 'lucide-react'; // ✅ added Instagram here
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
@@ -105,12 +105,14 @@ export default function Hero() {
             </Button>
           </motion.div>
 
+          {/* ✅ Social icons section */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex gap-4 justify-center"
           >
+            {/* GitHub */}
             <Button
               variant="ghost"
               size="icon"
@@ -119,6 +121,8 @@ export default function Hero() {
             >
               <Github className="h-6 w-6" />
             </Button>
+
+            {/* LinkedIn */}
             <Button
               variant="ghost"
               size="icon"
@@ -126,6 +130,16 @@ export default function Hero() {
               onClick={() => window.open('https://www.linkedin.com/in/utkarsh-rastogi-750830337/', '_blank')}
             >
               <Linkedin className="h-6 w-6" />
+            </Button>
+
+            {/* ✅ Instagram */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-full hover:bg-blue-50 dark:hover:bg-slate-800"
+              onClick={() => window.open('https://www.instagram.com/utkarsh_2709/', '_blank')}
+            >
+              <Instagram className="h-6 w-6" />
             </Button>
           </motion.div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Moon, Sun } from 'lucide-react';
+import { Github, Linkedin, Instagram, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
@@ -32,6 +32,7 @@ export default function Footer() {
             >
               <Github className="w-5 h-5" />
             </Button>
+
             <Button
               variant="ghost"
               size="icon"
@@ -40,6 +41,16 @@ export default function Footer() {
             >
               <Linkedin className="w-5 h-5" />
             </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-full"
+              onClick={() => window.open('https://www.instagram.com/utkarsh_2709/', '_blank')}
+            >
+              <Instagram className="w-5 h-5" />
+            </Button>
+
             <Button
               variant="ghost"
               size="icon"

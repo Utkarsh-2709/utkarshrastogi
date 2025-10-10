@@ -171,6 +171,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/instagram.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/instagram.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Instagram)\n/* harmony export */ });\n/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ \"(ssr)/./node_modules/lucide-react/dist/esm/createLucideIcon.js\");\n/**\n * @license lucide-react v0.446.0 - ISC\n *\n * This source code is licensed under the ISC license.\n * See the LICENSE file in the root directory of this source tree.\n */\n\n\n\nconst Instagram = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"Instagram\", [\n  [\"rect\", { width: \"20\", height: \"20\", x: \"2\", y: \"2\", rx: \"5\", ry: \"5\", key: \"2e1cvw\" }],\n  [\"path\", { d: \"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\", key: \"9exkf1\" }],\n  [\"line\", { x1: \"17.5\", x2: \"17.51\", y1: \"6.5\", y2: \"6.5\", key: \"r4j83e\" }]\n]);\n\n\n//# sourceMappingURL=instagram.js.map\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvbHVjaWRlLXJlYWN0L2Rpc3QvZXNtL2ljb25zL2luc3RhZ3JhbS5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFc0Q7O0FBRXRELGtCQUFrQixnRUFBZ0I7QUFDbEMsYUFBYSw0RUFBNEU7QUFDekYsYUFBYSxxRUFBcUU7QUFDbEYsYUFBYSw4REFBOEQ7QUFDM0U7O0FBRWdDO0FBQ2hDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmV4dGpzLy4vbm9kZV9tb2R1bGVzL2x1Y2lkZS1yZWFjdC9kaXN0L2VzbS9pY29ucy9pbnN0YWdyYW0uanM/MGFjOSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlIGx1Y2lkZS1yZWFjdCB2MC40NDYuMCAtIElTQ1xuICpcbiAqIFRoaXMgc291cmNlIGNvZGUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIElTQyBsaWNlbnNlLlxuICogU2VlIHRoZSBMSUNFTlNFIGZpbGUgaW4gdGhlIHJvb3QgZGlyZWN0b3J5IG9mIHRoaXMgc291cmNlIHRyZWUuXG4gKi9cblxuaW1wb3J0IGNyZWF0ZUx1Y2lkZUljb24gZnJvbSAnLi4vY3JlYXRlTHVjaWRlSWNvbi5qcyc7XG5cbmNvbnN0IEluc3RhZ3JhbSA9IGNyZWF0ZUx1Y2lkZUljb24oXCJJbnN0YWdyYW1cIiwgW1xuICBbXCJyZWN0XCIsIHsgd2lkdGg6IFwiMjBcIiwgaGVpZ2h0OiBcIjIwXCIsIHg6IFwiMlwiLCB5OiBcIjJcIiwgcng6IFwiNVwiLCByeTogXCI1XCIsIGtleTogXCIyZTFjdndcIiB9XSxcbiAgW1wicGF0aFwiLCB7IGQ6IFwiTTE2IDExLjM3QTQgNCAwIDEgMSAxMi42MyA4IDQgNCAwIDAgMSAxNiAxMS4zN3pcIiwga2V5OiBcIjlleGtmMVwiIH1dLFxuICBbXCJsaW5lXCIsIHsgeDE6IFwiMTcuNVwiLCB4MjogXCIxNy41MVwiLCB5MTogXCI2LjVcIiwgeTI6IFwiNi41XCIsIGtleTogXCJyNGo4M2VcIiB9XVxuXSk7XG5cbmV4cG9ydCB7IEluc3RhZ3JhbSBhcyBkZWZhdWx0IH07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1pbnN0YWdyYW0uanMubWFwXG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/lucide-react/dist/esm/icons/instagram.js\n");
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/lucide-react/dist/esm/icons/linkedin.js":
 /*!**************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/linkedin.js ***!

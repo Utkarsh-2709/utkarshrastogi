@@ -7,7 +7,17 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader as Loader2, CircleCheck as CheckCircle } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Instagram,
+  Loader as Loader2,
+  CircleCheck as CheckCircle,
+} from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -91,7 +101,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
-                      <a href="mailto:rutkarsh165@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
+                      <a
+                        href="mailto:rutkarsh165@gmail.com"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
                         rutkarsh165@gmail.com
                       </a>
                     </div>
@@ -121,13 +134,15 @@ export default function Contact() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Connect with me</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
+                    Connect with me
+                  </h4>
                   <div className="flex gap-4">
                     <Button
                       variant="outline"
                       size="icon"
                       className="rounded-full"
-                      onClick={() => window.open('https://github.com', '_blank')}
+                      onClick={() => window.open('https://github.com/Utkarsh-2709', '_blank')}
                     >
                       <Github className="w-5 h-5" />
                     </Button>
@@ -135,9 +150,24 @@ export default function Contact() {
                       variant="outline"
                       size="icon"
                       className="rounded-full"
-                      onClick={() => window.open('https://linkedin.com', '_blank')}
+                      onClick={() =>
+                        window.open(
+                          'https://www.linkedin.com/in/utkarsh-rastogi-750830337/',
+                          '_blank'
+                        )
+                      }
                     >
                       <Linkedin className="w-5 h-5" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                      onClick={() =>
+                        window.open('https://www.instagram.com/utkarsh_2709/', '_blank')
+                      }
+                    >
+                      <Instagram className="w-5 h-5" />
                     </Button>
                   </div>
                 </div>
@@ -161,7 +191,9 @@ export default function Contact() {
                       className="flex flex-col items-center justify-center space-y-4"
                     >
                       <Loader2 className="w-16 h-16 text-blue-600 dark:text-blue-400 animate-spin" />
-                      <p className="text-lg text-gray-700 dark:text-gray-300">Sending your message...</p>
+                      <p className="text-lg text-gray-700 dark:text-gray-300">
+                        Sending your message...
+                      </p>
                     </motion.div>
                   ) : showSuccess ? (
                     <motion.div
@@ -178,7 +210,9 @@ export default function Contact() {
                       >
                         <CheckCircle className="w-20 h-20 text-green-600 dark:text-green-400" />
                       </motion.div>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Message Sent!</h3>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        Message Sent!
+                      </h3>
                       <p className="text-gray-700 dark:text-gray-300 max-w-sm">
                         Thank you for reaching out. I'll get back to you as soon as possible.
                       </p>
@@ -200,7 +234,9 @@ export default function Contact() {
                           type="text"
                           placeholder="Your name"
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
                           required
                           className="bg-white dark:bg-slate-900"
                         />
@@ -214,7 +250,9 @@ export default function Contact() {
                           type="email"
                           placeholder="your.email@example.com"
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
                           required
                           className="bg-white dark:bg-slate-900"
                         />
@@ -228,7 +266,9 @@ export default function Contact() {
                           placeholder="Your message..."
                           rows={6}
                           value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, message: e.target.value })
+                          }
                           required
                           className="bg-white dark:bg-slate-900"
                         />
